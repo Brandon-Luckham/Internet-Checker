@@ -16,9 +16,6 @@ if __name__ == "__main__":
     while True:
         internet_connection = test_internet()
         if not internet_connection:
-          print("No Internet")
           with open("internet.txt", "a") as file:
               file.write(f"Internet Down at {datetime.now()}\n")
-        else:
-            print("Internet Up")
         time.sleep(300)
